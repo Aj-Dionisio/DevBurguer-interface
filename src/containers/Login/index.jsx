@@ -10,8 +10,8 @@ import { api } from '../../services/Api';
 
 
 export default function Login() {
-
-    const schema = yup.object({
+    
+const schema = yup.object({
         email: yup.string().required('O e-mail é obrigatório').email('Digite um e-mail valido'),
         password: yup.string().min(6, 'a senha deve ter no minimo 6 caracteres').required('Digite sua senha'),
     }).required(); /*validação de dados,se estão de acordo com o que estamos pedindo*/
