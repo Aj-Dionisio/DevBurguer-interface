@@ -3,6 +3,8 @@ import BackgroundLogin from "../../assets/background-login.jpg"
 
 import Background from "../../assets/background.png"
 
+import { Link as ReactLink} from "react-router-dom";
+
 export const Container = styled.div`
     display: flex;
     height: 100vh;
@@ -118,3 +120,9 @@ export const InputContainer = styled.div`
 
 `;
 
+
+export const Link = styled(ReactLink)`
+    text-decoration:none;
+    color: #fff;
+
+`
