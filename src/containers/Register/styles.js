@@ -43,6 +43,7 @@ export const RightContainer = styled.div`
     max-width: 50%;
 
     background: url('${Background}');
+    background-size: cover;
     background-color:#1E1E1E;
 
 
