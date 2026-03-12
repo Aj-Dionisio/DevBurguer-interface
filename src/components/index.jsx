@@ -1,3 +1,5 @@
+import { api } from '../../services/Api';
+
 export function CategoriesCarousel(){
 
   const [categories, setCategories] = useState([]);
