@@ -22,7 +22,9 @@ const schema = yup.object({
         resolver: yupResolver(schema)
     });
     const onSubmit = async data => {
-        const response = await toast.promise(api.post('/sessions', {
+        const {data:{ token },}
+             = await toast.promise(
+            api.post('/sessions', {
             email: data.email,
             password: data.password,
         }),
@@ -39,8 +41,8 @@ const schema = yup.object({
                 error: 'Email ou senha errado 🤯'
             },
         );
-        console.log(response)
-    }
+        localStorage.setItem('token', token)
+    };
     
     return (
     <Container>
